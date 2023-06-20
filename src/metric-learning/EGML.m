@@ -1,3 +1,9 @@
+% EGML.m 
+% A trainableModel class for Matrix Entropy Gap Metric Learning
+% 
+% Luis Gonzalo Sanchez Giraldo
+% June 2023 
+
 classdef EGML < trainableModel
     methods
         function obj = EGML(hyperparams)

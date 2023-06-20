@@ -1,3 +1,11 @@
+% EUCLIDEAN.m 
+% A trainableModel class for to wrap Euclidean distance as one Metric Learning
+% There are no parameters that need to be trained here, but it is wrapped around a trainable model
+% to ease comaparisons with trainableModels.
+%
+% Luis Gonzalo Sanchez Giraldo
+% June 2023 
+
 classdef EUCLIDEAN < trainableModel
     methods
         function obj = EUCLIDEAN(hyperparams)

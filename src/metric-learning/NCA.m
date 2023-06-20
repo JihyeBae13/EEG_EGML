@@ -1,3 +1,9 @@
+% NCA.m 
+% A trainableModel class for Neighborhood Component Analysis
+% 
+% Luis Gonzalo Sanchez Giraldo
+% June 2023 
+
 classdef NCA < trainableModel
     methods
         function obj = NCA(hyperparams)

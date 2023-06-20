@@ -1,11 +1,24 @@
+% SVM.m 
+% A trainableModel class that wrap LIBSVM support vector machine
+    % 
+
+    % To use this class you must have LIBSVM package installed
+    % https://www.csie.ntu.edu.tw/~cjlin/libsvm/
+% 
+% Luis Gonzalo Sanchez Giraldo
+% June 2023 
+
+
 classdef SVM < trainableModel
+
+
     methods
         function obj = SVM(hyperparams)
            obj.hyperparams = obj.initializeHyperparams(hyperparams);
         end
         
         function train(obj, data, varargin)
-            % initialize training parameters
+            % Initialize training parameters
             assert(length(varargin) <= 1, 'SVM error. Invalid number of input arguments.');
             if isempty(varargin)
                 param = struct([]);
@@ -40,6 +53,7 @@ classdef SVM < trainableModel
         end
         
     end
+
     methods (Access = private)
         function param = initializeTrainParams(obj, param)
             % do nothing
@@ -85,14 +99,14 @@ classdef SVM < trainableModel
                               'verbose',                'q %d'};
             options_string = '';
             if istest ~= true   
-                for iPrm = 1:size(svm_param_list,1)
-                    if ~isempty(obj.hyperparams.(svm_param_list{iPrm,1}))
-                        if strcmp(svm_param_list{iPrm,1}, 'weight')
-                            for iCls = 1:length(obj.hyperparams.weight)
-                                options_string = strcat(options_string, ' -', sprintf(svm_param_list{iPrm,2},iCls, obj.hyperparams.(svm_param_list{iPrm,1})(iCls)));
+                for iPrm = 1 : size(svm_param_list,1)
+                    if ~isempty(obj.hyperparams.(svm_param_list{iPrm, 1}))
+                        if strcmp(svm_param_list{iPrm, 1}, 'weight')
+                            for iCls = 1 : length(obj.hyperparams.weight)
+                                options_string = strcat(options_string, ' -', sprintf(svm_param_list{iPrm, 2},iCls, obj.hyperparams.(svm_param_list{iPrm, 1})(iCls)));
                             end
                         else
-                            options_string = strcat(options_string, ' -', sprintf(svm_param_list{iPrm,2}, obj.hyperparams.(svm_param_list{iPrm,1})));
+                            options_string = strcat(options_string, ' -', sprintf(svm_param_list{iPrm, 2}, obj.hyperparams.(svm_param_list{iPrm, 1})));
                         end
                     end
                 end
