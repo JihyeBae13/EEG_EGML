@@ -42,7 +42,7 @@ classdef SVM < trainableModel
             end
             libsvm_train_options = obj.makeLIBSVMOptionsString();
             
-            obj.trainable_params(1).svm_model = svmtrain(labels, X, libsvm_train_options);
+            obj.trainable_params(1).svm_model = svmtrain(labels, X, libsvm_train_options); % This is the function from LIBSVM not from MATLAB toolbox
                        
         end
         

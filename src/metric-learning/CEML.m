@@ -1,3 +1,9 @@
+% CEML.m 
+% A trainableModel class for Common Spatial Pattern
+% 
+% Luis Gonzalo Sanchez Giraldo
+% June 2023 
+
 classdef CEML < trainableModel
     methods
         function obj = CEML(hyperparams)
@@ -62,7 +68,7 @@ classdef CEML < trainableModel
             
             for i= 1 : param.n_iter
                 mu = mu - (param.mu_in - param.mu_fin)/param.n_iter;  % Step size schedulling
-                K_y = real(guassianMatrix(Y,sigma))/N;  % Gram matrix of tranformed inputs
+                K_y = real(gaussianMatrix(Y,sigma))/N;  % Gram matrix of tranformed inputs
                 K_ly = K_l.*K_y*N;                      % Gram matrix joint-space
                 
                 %%% Compute spectrum of K_y and K_ly

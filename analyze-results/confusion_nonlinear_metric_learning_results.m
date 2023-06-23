@@ -2,15 +2,17 @@ clear all
 close all
 clc
 
-addpath(genpath('/home/lgsanchez/work/Code/research/bci-eeg/metric-learning-premovement/src'));
-addpath('/home/lgsanchez/work/Code/libraries/libsvm/matlab/')
+%% IMPORTANT:
+% Set the path to  the code %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Make sure you have set the right paths in this script
+set_paths;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% here we fix the partitions to compare all methods
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 METHOD_USED = 'egml';
 
 %% here we fix the partitions to compare all methods
-data_root_path = '/home/lgsanchez/work/Code/research/bci-eeg/metric-learning-premovement/data/';
-results_root_path = fullfile('/home/lgsanchez/work/Code/research/bci-eeg/metric-learning-premovement/results/cv_results/', strcat('nonlinear_',METHOD_USED));
-% results_root_path = '/home/lgsanchez/work/Code/research/bci-eeg/metric-learning-premovement/results/cv_results/ceml';
+results_root_path = fullfile(fullfile(root_path, '/results/cv_results/'), strcat('nonlinear_',METHOD_USED));
 
 feature_type = {'FTA_Features',...
                 'FTA5_Features',...
@@ -171,14 +173,4 @@ for iSbj = 1:length(subject_id)
                                                   mean(class_predictive_values(2,:)), std(class_predictive_values(2,:)) );
 
     end
-end
-
-function sign_prefix = getSignPrefix(x)
-if x > 0
-    sign_prefix = 'p';
-elseif x < 0
-    sign_prefix = 'm';
-elseif x == 0
-    sign_prefix = 'z';
-end
 end

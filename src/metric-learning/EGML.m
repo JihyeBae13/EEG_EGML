@@ -66,7 +66,7 @@ classdef EGML < trainableModel
             
             for i= 1 : param.n_iter
                 mu = mu - (param.mu_in - param.mu_fin)/param.n_iter;  % Step size schedulling
-                K_y = real(guassianMatrix(Y,sigma))/N;  % Gram matrix of tranformed inputs
+                K_y = real(gaussianMatrix(Y,sigma))/N;  % Gram matrix of tranformed inputs
                 K_ly = K_l.*K_y*N;                      % Gram matrix joint-space
                 % compute permutation of labels
                 i_p = randperm(size(K_l,1));

@@ -42,7 +42,7 @@ classdef NCA < trainableModel
             batch_size = min(5000, n);
             no_batches = ceil(n / batch_size);
             max_iter = ceil(max_iter / no_batches);
-            [lablist, foo, labels] = unique(labels);
+            [~, ~, labels] = unique(labels);
             A = randn(d_x, obj.hyperparams(1).d_y) * .01;
             converged = false;
             iter = 0;

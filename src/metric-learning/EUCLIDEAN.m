@@ -24,9 +24,7 @@ classdef EUCLIDEAN < trainableModel
                 param = varargin{1};
             end
             
-            % RANDOM INITIALIZATION
             X = data{1};
-            N = size(X, 1);        % Number of exemplars
             d_x = size(X,2);      % Input dimensionality
             
             if isempty(obj.hyperparams.d_y)

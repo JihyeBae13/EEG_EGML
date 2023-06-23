@@ -1,3 +1,11 @@
+% run_cross_validation_pretrained.m 
+% 
+% This is a script that is called from another script that trains or evaluates
+% a given metric. It assume the metric has been trained already and the results
+% are located in "pretrained_results_path" 
+% 
+% Luis Gonzalo Sanchez Giraldo
+
 for iSbj = 1:length(subject_id)
     fprintf('Cross validating folds for subject %s, window %s\n', subject_id{iSbj}, window_name);
     % read  data dir for subject

@@ -1,3 +1,9 @@
+% PCANormalizer.m 
+% A trainableModel class for to normalize data using PCA
+% 
+% Luis Gonzalo Sanchez Giraldo
+% June 2023 
+
 classdef PCANormalizer < trainableModel
     methods
         function obj = PCANormalizer(hyperparams)

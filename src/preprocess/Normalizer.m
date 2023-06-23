@@ -1,3 +1,9 @@
+% Normalizer.m 
+% A trainableModel class for data normalization
+% 
+% Luis Gonzalo Sanchez Giraldo
+% June 2023 
+
 classdef Normalizer < trainableModel
     methods
         function obj = Normalizer(hyperparams)

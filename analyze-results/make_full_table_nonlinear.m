@@ -2,8 +2,11 @@ clear all
 close all
 clc
 
-addpath(genpath('/home/lgsanchez/work/Code/research/bci-eeg/metric-learning-premovement/src'));
-addpath('/home/lgsanchez/work/Code/libraries/libsvm/matlab/')
+%% IMPORTANT:
+% Set the path to  the code %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Make sure you have set the right paths in this script
+set_paths;
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 methods = {"euclidean",...
@@ -13,8 +16,6 @@ methods = {"euclidean",...
 
 %% here we fix the partitions to compare all methods
 
-% results_root_path = '/home/lgsanchez/work/Code/research/bci-eeg/metric-learning-premovement/results/cv_results/ceml';
-
 feature_type = {"FTA_Features",...
                 "FTA5_Features",...
                 "RawEEG_Features"};
@@ -22,21 +23,8 @@ feature_type = {"FTA_Features",...
 subject_id = {"B", "C1", "C2"};  
 
 
-% sim_params.feature_type = feature_type{2};
-% sim_params.pre_onset = true;
 sim_params.n_folds = 10; % number of folds to get test error estimates
 sim_params.n_runs = 1;
-% sim_params.n_subfolds = 10; % number of folds to do model selection (this is a nested cv fold within each training-test fold)
-% 
-% % For this experiment, we are generating data windows of 850 milliseconds
-% if sim_params.pre_onset
-%     sim_params.wd_str_t = -0.85; % in seconds
-%     sim_params.wd_end_t = 0;
-% else %post-onset
-%     sim_params.wd_str_t = 0;
-%     sim_params.wd_end_t = 0.85;
-% end
-
 %% parameters of cross-validation
 
 window_names = {"m085z000", "z000p085"};
@@ -184,13 +172,3 @@ function fh = makeNiceBar(subject_method_mean, subject_method_std, subject_list,
     legend(method_list, 'Location','southeast')
     grid on
 end
-% 
-% figure()
-% v = randi(20,12,3); 
-% h = bar(v,.8); 
-% % Get group centers
-% xCnt = get(h(1),'XData') + cell2mat(get(h,'XOffset')); % XOffset is undocumented!
-% % Create Tick Labels
-% xLab = repmat({'p1','p2','p3'},1,numel(xCnt)/3); 
-% % Set individual ticks
-% set(gca, 'XTick', sort(xCnt(:)), 'XTickLabel', xLab)

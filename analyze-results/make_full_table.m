@@ -1,9 +1,11 @@
 clear all
-% close all
+close all
 clc
 
-addpath(genpath('/home/lgsanchez/work/Code/research/bci-eeg/metric-learning-premovement/src'));
-addpath('/home/lgsanchez/work/Code/libraries/libsvm/matlab/')
+%% IMPORTANT:
+% Set the path to  the code %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Make sure you have set the right paths in this script
+set_paths;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 methods = {"euclidean",...
@@ -22,20 +24,8 @@ feature_type = {"FTA_Features",...
 subject_id = {"B", "C1", "C2"};  
 
 
-% sim_params.feature_type = feature_type{2};
-% sim_params.pre_onset = true;
 sim_params.n_folds = 10; % number of folds to get test error estimates
 sim_params.n_runs = 1;
-% sim_params.n_subfolds = 10; % number of folds to do model selection (this is a nested cv fold within each training-test fold)
-% 
-% % For this experiment, we are generating data windows of 850 milliseconds
-% if sim_params.pre_onset
-%     sim_params.wd_str_t = -0.85; % in seconds
-%     sim_params.wd_end_t = 0;
-% else %post-onset
-%     sim_params.wd_str_t = 0;
-%     sim_params.wd_end_t = 0.85;
-% end
 
 %% parameters of cross-validation
 

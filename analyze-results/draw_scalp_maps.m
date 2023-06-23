@@ -2,8 +2,12 @@ clear all
 close all
 clc
 
-addpath(genpath('/home/lgsanchez/work/Code/research/bci-eeg/metric-learning-premovement/src'));
-addpath('/home/lgsanchez/work/Code/libraries/libsvm/matlab/')
+
+%% IMPORTANT:
+% Set the path to  the code %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Make sure you have set the right paths in this script
+set_paths;
+
 addpath(genpath('/home/lgsanchez/work/Code/research/bci-eeg/plot_topography'))
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
