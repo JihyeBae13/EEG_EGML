@@ -53,4 +53,4 @@ In this second case, you must add the path everytime you start a new MATLAB sess
 ## Setting paths
 Once you have downloaded the data and additional libraries, you must set the paths
 where these are located. Do this by modifying the matlab file "set_paths.m" located 
-in the src. 
+in the src directory. 
