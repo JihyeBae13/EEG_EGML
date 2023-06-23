@@ -7,22 +7,22 @@ Pre-Movement and Movement Intention Classification for Brain Machine Interfaces.
 Frontiers in Human Neuroscience 16:902183. doi: 10.3389/fnhum.2022.902183
 
 ## Data
-You must have Downloaded the dataset from
+You must have Downloaded the dataset from\
    Kaya, M., Binli, M., Ozbay, E. et al. A large electroencephalographic motor 
    imagery dataset for electroencephalographic brain computer interfaces. 
    Sci Data 5, 180211 (2018). https://doi.org/10.1038/sdata.2018.211
 
 To access the data https://doi.org/10.6084/m9.figshare.c.3917698.v1
- For experiments, you must download the following 3 files:
+ For experiments, you must download the following 3 files:\
    - FREEFORMSubjectB1511112StLRHand.mat
    - FREEFORMSubjectC1512082StLRHand.mat
    - REEFORMSubjectC1512102StLRHand.mat
 
 ## Additional libraries required
-- You must have LIBSVM package installed
+- You must have LIBSVM package installed\
  https://www.csie.ntu.edu.tw/~cjlin/libsvm/
 
-- To visualize the topograpic maps
+- To visualize the topograpic maps\
  Víctor Martínez-Cagigal (2023). Topographic EEG/MEG plot 
  (https://www.mathworks.com/matlabcentral/fileexchange/72729-topographic-eeg-meg-plot), 
  MATLAB Central File Exchange. 
