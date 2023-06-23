@@ -47,7 +47,7 @@ repository
 "install.m" which adds the location of the repository permanently.
 
 - Alternatively, you can run:
-addpath('<path-to-the-repo>');
+addpath('\<path-to-the-repo\>');
 In this second case, you must add the path everytime you start a new MATLAB session. 
 
 ## Setting paths
