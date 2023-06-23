@@ -12,8 +12,8 @@ You must have Downloaded the dataset from\
    imagery dataset for electroencephalographic brain computer interfaces. 
    Sci Data 5, 180211 (2018). https://doi.org/10.1038/sdata.2018.211
 
-To access the data https://doi.org/10.6084/m9.figshare.c.3917698.v1
- For experiments, you must download the following 3 files:\
+To access the data https://doi.org/10.6084/m9.figshare.c.3917698.v1 \
+ For experiments, you must download the following 3 files:
    - FREEFORMSubjectB1511112StLRHand.mat
    - FREEFORMSubjectC1512082StLRHand.mat
    - REEFORMSubjectC1512102StLRHand.mat
