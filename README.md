@@ -6,7 +6,7 @@ Plucknett W, Sanchez Giraldo LG and Bae J (2022) Metric Learning in Freewill EEG
 Pre-Movement and Movement Intention Classification for Brain Machine Interfaces.
 Frontiers in Human Neuroscience 16:902183. doi: 10.3389/fnhum.2022.902183
 
-# Data
+## Data
 You must have Downloaded the dataset from
    Kaya, M., Binli, M., Ozbay, E. et al. A large electroencephalographic motor 
    imagery dataset for electroencephalographic brain computer interfaces. 
@@ -18,7 +18,7 @@ To access the data https://doi.org/10.6084/m9.figshare.c.3917698.v1
    - FREEFORMSubjectC1512082StLRHand.mat
    - REEFORMSubjectC1512102StLRHand.mat
 
-# Additional libraries required
+## Additional libraries required
 - You must have LIBSVM package installed
  https://www.csie.ntu.edu.tw/~cjlin/libsvm/
 
@@ -27,9 +27,9 @@ To access the data https://doi.org/10.6084/m9.figshare.c.3917698.v1
  (https://www.mathworks.com/matlabcentral/fileexchange/72729-topographic-eeg-meg-plot), 
  MATLAB Central File Exchange. 
 
-# Running the code
+## Running the code
 First, you should be familiar with the directory structure of the code
-## Directory structure 
+### Directory structure 
 repository___    
              |____src
              |____experiment-scripts
@@ -42,7 +42,7 @@ repository___
 "experiments-scripts" contains the code to run the experiments reported in the paper
 "analyse-results" contains the code to get figures and tables reported in the paper
 
-# Intall the code
+## Install the code
 - In MATLAB set as your working directory the location of this repository to run 
 "install.m" which adds the location of the repository permanently.
 
@@ -50,7 +50,7 @@ repository___
 addpath('<path-to-the-repo>');
 In this second case, you must add the path everytime you start a new MATLAB session. 
 
-# Setting paths
+## Setting paths
 Once you have downloaded the data and additional libraries, you must set the paths
 where these are located. Do this by modifying the matlab file "set_paths.m" located 
 in the src. 
