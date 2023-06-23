@@ -37,7 +37,7 @@ repository
 |____data (this can be placed elsewhere)\
 |____results (this can be placed elsewhere)\
 
-"repository" is the name of the repo wich by default is "metric-learning-premovement"\
+"repository" is the name of the repo which by default is "metric-learning-premovement"\
 "src" contains the models and functions used in the experiments and analysis\
 "experiments-scripts" contains the code to run the experiments reported in the paper\
 "analyse-results" contains the code to get figures and tables reported in the paper
